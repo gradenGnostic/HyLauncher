@@ -473,35 +473,17 @@ class HyLauncherApp(ctk.CTk):
         
         user_dir = os.path.join(os.environ['APPDATA'], "Hytale")
         
-        # Core arguments
+        # Core arguments with custom tokens
         args = [
-            client_exe, 
-            "--name", p["username"], 
-            "--uuid", p["uuid"],
+            client_exe,
+            f"--uuid={p['uuid']}",
+            f"--name={p['username']}",
+            "--identity-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6Imh5dGFsZTpjbGllbnQifQ.qbJsWWj3h-6iYuAP85Vjl_ShgyArn-57CCPEaeQbrRE",
+            "--session-token=0",
             "--app-dir", game_root,
             "--user-dir", user_dir,
             "--tcp"
         ]
-
-        if self.launch_mode.get() == "simulated":
-            # Generate a payload that satisfies internal client verification
-            token_body = {
-                "sub": p["uuid"], 
-                "name": p["username"], 
-                "roles": ["player", "admin"],
-                "scope": "hytale:client",
-                "iat": int(time.time())
-            }
-            token = base64.urlsafe_b64encode(json.dumps(token_body).encode()).decode().rstrip('=')
-            
-            # Use authenticated mode to unlock the UI
-            args.extend(["--identity-token", f"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.{token}.signature"])
-            args.extend(["--session-token", f"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.{token}.signature"])
-            args.extend(["--auth-mode", "authenticated"])
-            
-            self.log_message("Multiplayer: Simulated Authentication enabled. (Ensure hosts file points api.hytale.com to 127.0.0.1)", "sys")
-        else:
-            args.extend(["--auth-mode", "offline"])
 
         if server_address:
             args.extend(["--connect", server_address])
