@@ -29,7 +29,3 @@ Technical Details
 The launcher ensures the game runs from the correct working directory (Client folder) and maps the user data to:
 %APPDATA%\Hytale\UserData
 
-Important Notes
-
-[!NOTE]
-This is a standalone tool for offline use. It does not include any Hytale game assets—you need to have the game files already installed.
