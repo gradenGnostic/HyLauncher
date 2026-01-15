@@ -1,6 +1,6 @@
 # Gaia Launcher - Hytale Launcher
 
-Gaia is a modern, open-source mod manager and community hub for Hytale, built with Electron and React. It provides an intuitive interface for discovering, installing, and managing mods from Orbis.place.
+Gaia is a modern, open-source mod manager for Hytale, built with Electron. It provides an intuitive interface for discovering, installing, and managing mods from Orbis.place.
 
 ## Features
 
