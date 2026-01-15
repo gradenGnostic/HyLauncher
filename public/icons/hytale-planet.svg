@@ -1,0 +1,52 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background glow -->
+  <defs>
+    <radialGradient id="planetGradient" cx="40%" cy="40%">
+      <stop offset="0%" style="stop-color:#90EE90;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#228B22;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#1a6b1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0d3d0d;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="waterGradient" cx="50%" cy="60%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Glow effect -->
+  <circle cx="256" cy="256" r="260" fill="#FFFF99" opacity="0.3"/>
+  
+  <!-- Main planet sphere -->
+  <circle cx="256" cy="256" r="240" fill="url(#waterGradient)"/>
+  
+  <!-- Water areas -->
+  <circle cx="256" cy="320" r="120" fill="#1E90FF" opacity="0.8"/>
+  <ellipse cx="200" cy="280" rx="80" ry="60" fill="#4169E1"/>
+  
+  <!-- Mountain range (snow-capped) -->
+  <path d="M 180 200 L 220 100 L 240 140 L 270 90 L 290 150 L 320 80 L 340 180 Z" fill="#F5F5F5" opacity="0.9"/>
+  <path d="M 180 200 L 220 100 L 240 140 L 270 90 L 290 150 L 320 80 L 340 180 Z" fill="none" stroke="#D3D3D3" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Forest areas -->
+  <ellipse cx="240" cy="240" rx="100" ry="80" fill="#32CD32"/>
+  <path d="M 200 220 Q 210 210 220 220" fill="none" stroke="#228B22" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 240 200 Q 255 185 270 200" fill="none" stroke="#228B22" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 270 240 Q 285 225 300 240" fill="none" stroke="#228B22" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- Desert/sand areas -->
+  <ellipse cx="320" cy="280" rx="60" ry="50" fill="#DAA520"/>
+  <circle cx="330" cy="270" r="8" fill="#CD853F"/>
+  <circle cx="315" cy="285" r="6" fill="#CD853F"/>
+  
+  <!-- Red volcanic region -->
+  <path d="M 320 330 L 340 300 L 360 320 Z" fill="#DC143C"/>
+  <path d="M 325 340 L 335 325 L 345 340 Z" fill="#B22222"/>
+  
+  <!-- Clouds -->
+  <path d="M 150 160 Q 160 150 170 160" fill="white" opacity="0.7" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  <path d="M 340 120 Q 350 110 360 120" fill="white" opacity="0.6" stroke="white" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Sun glow (top-left) -->
+  <circle cx="80" cy="80" r="40" fill="#FFD700" opacity="0.4"/>
+  <circle cx="80" cy="80" r="30" fill="#FFA500" opacity="0.5"/>
+</svg>

@@ -1,0 +1,156 @@
+/* ModCard Styles */
+
+.mod-card {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.08) 0%, rgba(76, 175, 80, 0.03) 100%);
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  border-radius: 10px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.mod-card:hover {
+  border-color: rgba(76, 175, 80, 0.4);
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.12) 0%, rgba(76, 175, 80, 0.06) 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(76, 175, 80, 0.15);
+}
+
+.mod-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.mod-card-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #e0e6ff;
+  word-break: break-word;
+}
+
+.mod-author {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: rgba(76, 175, 80, 0.7);
+  font-weight: 500;
+}
+
+.toggle-mod-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.toggle-icon {
+  transition: color 0.3s ease;
+}
+
+.toggle-icon.enabled {
+  color: #4caf50;
+}
+
+.toggle-icon.disabled {
+  color: rgba(224, 230, 255, 0.3);
+}
+
+.mod-meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.mod-version {
+  display: inline-block;
+  padding: 4px 8px;
+  background: rgba(76, 175, 80, 0.15);
+  color: #4caf50;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.mod-description {
+  margin: 0 0 12px 0;
+  font-size: 12px;
+  color: rgba(224, 230, 255, 0.6);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.mod-stats {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(76, 175, 80, 0.1);
+  border-bottom: 1px solid rgba(76, 175, 80, 0.1);
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: rgba(224, 230, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e0e6ff;
+}
+
+.stat-value.enabled {
+  color: #4caf50;
+}
+
+.stat-value.disabled {
+  color: rgba(224, 230, 255, 0.4);
+}
+
+.mod-card-footer {
+  display: flex;
+  gap: 8px;
+}
+
+.delete-btn {
+  flex: 1;
+  padding: 8px 12px;
+  background: rgba(244, 67, 54, 0.15);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  color: #f44336;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.delete-btn:hover {
+  background: rgba(244, 67, 54, 0.25);
+  border-color: rgba(244, 67, 54, 0.5);
+}
