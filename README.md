@@ -12,10 +12,8 @@ Gaia is a modern, open-source mod manager for Hytale, built with Electron. It pr
 ### Mods Tab
 - **Installed Mods Management**
   - View all installed mods
-  - Search and filter by name or author
   - Toggle mods on/off
   - Delete mods
-  - Filter by enabled/disabled status
 
 - **Orbis Browser & Installer**
   - Browse mods from Orbis.place
