@@ -20,7 +20,7 @@ function createWindow() {
       nodeIntegration: false,
       contextIsolation: true
     },
-    icon: path.join(__dirname, 'public', 'icon.webp'),
+    icon: path.join(__dirname, 'public', 'icon.png'),
     titleBarStyle: process.platform === 'darwin' ? 'hiddenInset' : 'default'
   });
 
@@ -30,7 +30,9 @@ function createWindow() {
     mainWindow.loadURL('http://localhost:3000');
     mainWindow.webContents.openDevTools();
   } else {
-    mainWindow.loadFile(path.join(__dirname, 'build', 'index.html'));
+    const indexPath = path.join(__dirname, 'build', 'index.html');
+    console.log('Loading:', indexPath, 'Exists:', require('fs').existsSync(indexPath));
+    mainWindow.loadFile(indexPath);
   }
 
   mainWindow.on('closed', () => {

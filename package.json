@@ -2,6 +2,7 @@
   "name": "hylauncher",
   "version": "2.0.0",
   "description": "HyLauncher - The Lunar Client of Hytale. Launch Hytale with mods, browse Orbis.place, and manage your game experience.",
+  "homepage": "./",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -38,9 +39,13 @@
   },
   "build": {
     "appId": "com.hylauncher",
-    "productName": "HyLauncher",
+    "productName": "Gaia",
     "directories": {
-      "buildResources": "build"
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "extraMetadata": {
+      "main": "main.js"
     },
     "files": [
       "build/**/*",
@@ -50,16 +55,22 @@
       "package.json"
     ],
     "win": {
-      "target": "nsis",
-      "icon": "public/icon.webp"
+      "target": ["portable", "nsis"],
+      "icon": "public/icon.png"
     },
     "mac": {
       "target": "dmg",
-      "icon": "public/icon.webp"
+      "icon": "public/icon.png"
     },
     "linux": {
       "target": "AppImage",
-      "icon": "public/icon.webp"
+      "icon": "public/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
     }
   },
   "browserslist": {
